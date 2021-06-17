@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/screens/landing_screen.dart';
-import 'package:s2_ecommerce/utils/custom_theme.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
+
+import './screens/landing_screen.dart';
+import './utils/custom_theme.dart';
+import './screens/intro_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,6 +25,9 @@ class MyApp extends StatelessWidget {
             outlinedButtonTheme: customTheme.outlinedButtonTheme(),
           ),
           home: LandingScreen(),
+          routes: {
+            IntroScreen.routeName: (ctx) => IntroScreen(),
+          },
         );
       },
     );
