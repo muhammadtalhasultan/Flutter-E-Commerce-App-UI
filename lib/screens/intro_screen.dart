@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
+import '../constants/colors.dart';
+import '../screens/login_screen.dart';
+import '../utils/screen_utils.dart';
 
 class IntroScreen extends StatefulWidget {
   static const routeName = '/introScreen';
@@ -100,7 +101,9 @@ class TextView extends StatelessWidget {
             ),
             Spacer(),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(LoginScreen.routeName);
+              },
               child: Text(
                 'Get Started',
               ),
@@ -165,7 +168,9 @@ class IllustrationPageView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(LoginScreen.routeName);
+                  },
                   child: Text(
                     'Skip',
                     style: Theme.of(context).textTheme.headline4.copyWith(

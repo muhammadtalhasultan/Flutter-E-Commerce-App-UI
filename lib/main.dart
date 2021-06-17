@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import '../constants/colors.dart';
 
 import './screens/landing_screen.dart';
 import './utils/custom_theme.dart';
 import './screens/intro_screen.dart';
+import './screens/login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,10 +25,12 @@ class MyApp extends StatelessWidget {
             textTheme: customTheme.nunito(),
             elevatedButtonTheme: customTheme.elevatedButtonTheme(),
             outlinedButtonTheme: customTheme.outlinedButtonTheme(),
+            dividerTheme: customTheme.dividerTheme(),
           ),
           home: LandingScreen(),
           routes: {
             IntroScreen.routeName: (ctx) => IntroScreen(),
+            LoginScreen.routeName: (ctx) => LoginScreen(),
           },
         );
       },
