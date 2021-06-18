@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import '../constants/colors.dart';
 
 import './screens/landing_screen.dart';
 import './utils/custom_theme.dart';
 import './screens/intro_screen.dart';
 import './screens/login_screen.dart';
+import './screens/signup_screen.dart';
+import './screens/add_address_screen.dart';
+import './screens/map_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,6 +33,9 @@ class MyApp extends StatelessWidget {
           routes: {
             IntroScreen.routeName: (ctx) => IntroScreen(),
             LoginScreen.routeName: (ctx) => LoginScreen(),
+            SignupScreen.routeName: (ctx) => SignupScreen(),
+            AddAddressScreen.routeName: (ctx) => AddAddressScreen(),
+            MapScreen.routeName: (ctx) => MapScreen(),
           },
         );
       },

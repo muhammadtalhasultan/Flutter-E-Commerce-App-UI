@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import './signup_screen.dart';
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';
 import '../widgets/back_button_ls.dart';
@@ -25,11 +27,15 @@ class LoginScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Text(
-                    'Log In Continue!',
-                    style: Theme.of(context).textTheme.headline3.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
+                  Row(
+                    children: [
+                      Text(
+                        'Log In Continue!',
+                        style: Theme.of(context).textTheme.headline3.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                    ],
                   ),
                   Spacer(),
                   SocialMediaLogin(
@@ -63,6 +69,9 @@ class LoginScreen extends StatelessWidget {
                   OptionButton(
                     desc: 'Don\'t have an account? ',
                     method: 'Sign Up',
+                    onPressHandler: () {
+                      Navigator.of(context).pushNamed(SignupScreen.routeName);
+                    },
                   ),
                   Spacer(),
                 ],
