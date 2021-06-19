@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:s2_ecommerce/screens/home_screen.dart';
 
 import './signup_screen.dart';
 import '../constants/colors.dart';
@@ -60,7 +61,9 @@ class LoginScreen extends StatelessWidget {
                   ),
                   Spacer(),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(HomeScreen.routeName);
+                    },
                     child: Text('Login'),
                   ),
                   Spacer(

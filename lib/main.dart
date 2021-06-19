@@ -7,6 +7,7 @@ import './screens/login_screen.dart';
 import './screens/signup_screen.dart';
 import './screens/add_address_screen.dart';
 import './screens/map_screen.dart';
+import './screens/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +19,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        print(constraints.maxWidth);
         final customTheme = CustomTheme(constraints);
         return MaterialApp(
           title: 'Series 2 Ecommerce',
@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
             textTheme: customTheme.nunito(),
             elevatedButtonTheme: customTheme.elevatedButtonTheme(),
             outlinedButtonTheme: customTheme.outlinedButtonTheme(),
+            textButtonTheme: customTheme.textButtonTheme(),
             dividerTheme: customTheme.dividerTheme(),
           ),
           home: LandingScreen(),
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
             SignupScreen.routeName: (ctx) => SignupScreen(),
             AddAddressScreen.routeName: (ctx) => AddAddressScreen(),
             MapScreen.routeName: (ctx) => MapScreen(),
+            HomeScreen.routeName: (ctx) => HomeScreen(),
           },
         );
       },

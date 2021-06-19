@@ -40,6 +40,11 @@ class CustomTheme {
             fontWeight: FontWeight.normal,
             color: kTextColor,
           ),
+          headline5: TextStyle().copyWith(
+            fontSize: _getProportionateScreenWidth(20),
+            fontWeight: FontWeight.w700,
+            color: kTextColor,
+          ),
           bodyText1: TextStyle(
             fontSize: _getProportionateScreenWidth(14),
             fontWeight: FontWeight.w600,
@@ -121,6 +126,19 @@ class CustomTheme {
           ),
         ),
       );
+
+  textButtonTheme() => TextButtonThemeData(
+          style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all(
+          kPrimaryGreen,
+        ),
+        textStyle: MaterialStateProperty.all(
+          TextStyle(
+            fontSize: _getProportionateScreenWidth(17),
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ));
 
   dividerTheme() => DividerThemeData(
         color: kGreyShade3,
