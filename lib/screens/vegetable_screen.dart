@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
+import '../constants/colors.dart';
+import '../utils/screen_utils.dart';
+import '../widgets/custom_app_bar.dart';
 
 class VegetableScreen extends StatelessWidget {
   static const routeName = '/vegetable_screen';
@@ -10,7 +11,21 @@ class VegetableScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            CustomAppBarVege(),
+            CustomAppBar(
+              'Featured Vegetables',
+              [
+                Icon(
+                  Icons.search,
+                  color: kPrimaryGreen,
+                ),
+                SizedBox(
+                  width: getProportionateScreenWidth(16),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: getProportionateScreenHeight(10),
+            ),
             Expanded(
               child: ListView(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -22,6 +37,26 @@ class VegetableScreen extends StatelessWidget {
                   ListCard(
                     isSelected: false,
                     isDiscount: true,
+                  ),
+                  ListCard(
+                    isSelected: false,
+                    isDiscount: true,
+                  ),
+                  ListCard(
+                    isSelected: false,
+                    isDiscount: true,
+                  ),
+                  ListCard(
+                    isSelected: false,
+                    isDiscount: false,
+                  ),
+                  ListCard(
+                    isSelected: false,
+                    isDiscount: false,
+                  ),
+                  ListCard(
+                    isSelected: false,
+                    isDiscount: false,
                   ),
                   ListCard(
                     isSelected: false,
@@ -131,11 +166,17 @@ class ListCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               if (isDiscount)
-                Text(
-                  '\$90',
-                  style: TextStyle(
-                    color: kTextColorAccent,
-                    decoration: TextDecoration.lineThrough,
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/Divider.png'),
+                    ),
+                  ),
+                  child: Text(
+                    '\$90',
+                    style: TextStyle(
+                      color: kTextColorAccent,
+                    ),
                   ),
                 ),
               Text(
@@ -146,68 +187,6 @@ class ListCard extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class CustomAppBarVege extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(child: BackButtonText()),
-        Text(
-          'Featured Vegetables',
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(17),
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        Expanded(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Icon(
-                Icons.search,
-                color: kPrimaryGreen,
-              ),
-              SizedBox(
-                width: getProportionateScreenWidth(16),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class BackButtonText extends StatelessWidget {
-  const BackButtonText({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.of(context).pop();
-      },
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(
-            Icons.arrow_back_ios,
-            color: kPrimaryGreen,
-          ),
-          Text(
-            'Back',
-            style: Theme.of(context).textTheme.headline4.copyWith(
-                  color: kPrimaryGreen,
-                ),
           ),
         ],
       ),

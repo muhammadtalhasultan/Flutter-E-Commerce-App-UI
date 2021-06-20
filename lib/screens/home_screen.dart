@@ -7,7 +7,9 @@ import '../widgets/custom_nav_bar.dart';
 import '../widgets/deal_card.dart';
 import '../widgets/indi_deal_card.dart';
 import '../widgets/tab_title.dart';
+import '../widgets/category_card.dart';
 import './search_screen.dart';
+import './category_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/home_screen';
@@ -141,7 +143,7 @@ class CategoryTab extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  /// TODO: add routes
+                  Navigator.of(context).pushNamed(CategoryScreen.routeName);
                 },
                 child: Text(
                   'See All',
@@ -158,34 +160,6 @@ class CategoryTab extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-}
-
-class CategoryCard extends StatelessWidget {
-  final Category category;
-
-  const CategoryCard(
-    this.category,
-  );
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: getProportionateScreenWidth(24),
-          backgroundColor: category.color,
-          child: SizedBox(
-            width: getProportionateScreenWidth(28),
-            child: Image.asset(
-              category.catIcon,
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-        Text(category.catName)
-      ],
     );
   }
 }

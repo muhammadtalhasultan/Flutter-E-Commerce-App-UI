@@ -7,6 +7,7 @@ import '../widgets/custom_nav_bar.dart';
 import '../widgets/deal_card.dart';
 import '../widgets/indi_deal_card.dart';
 import '../widgets/tab_title.dart';
+import './fruit_screen.dart';
 
 class SearchScreen extends StatelessWidget {
   static const routeName = '/search_screen';
@@ -71,9 +72,15 @@ class SearchScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(
-                      child: IndiDealCard(
-                        isLeft: true,
-                        isSelected: true,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context)
+                              .pushNamed(FruitScreen.routeName);
+                        },
+                        child: IndiDealCard(
+                          isLeft: true,
+                          isSelected: true,
+                        ),
                       ),
                     ),
                     SizedBox(
