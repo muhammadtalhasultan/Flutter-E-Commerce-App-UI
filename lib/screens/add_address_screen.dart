@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';
 import '../widgets/back_button_ls.dart';
+import '../widgets/search_bar.dart';
 import './map_screen.dart';
 
 class AddAddressScreen extends StatelessWidget {
@@ -60,7 +61,7 @@ class AddAddressScreen extends StatelessWidget {
                     SizedBox(
                       height: getProportionateScreenHeight(10),
                     ),
-                    SearchBar(),
+                    SearchBar('Enter Address'),
                     SizedBox(
                       height: getProportionateScreenHeight(10),
                     ),
@@ -109,45 +110,6 @@ class AddAddressScreen extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class SearchBar extends StatelessWidget {
-  const SearchBar({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-          filled: true,
-          fillColor: kFillColorThird,
-          prefixIcon: Icon(Icons.search),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(
-              getProportionateScreenWidth(4),
-            ),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(
-              getProportionateScreenWidth(8),
-            ),
-            borderSide: BorderSide(
-              color: Colors.transparent,
-            ),
-          ),
-          hintText: 'Enter Address',
-          contentPadding: EdgeInsets.symmetric(
-            vertical: getProportionateScreenHeight(
-              10,
-            ),
-          ),
-          hintStyle: TextStyle(
-            color: kGreyShade2,
-            fontSize: getProportionateScreenWidth(17),
-          )),
     );
   }
 }

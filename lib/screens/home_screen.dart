@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/models/category.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
+
+import '../constants/colors.dart';
+import '../models/category.dart';
+import '../utils/screen_utils.dart';
+import '../widgets/custom_nav_bar.dart';
+import '../widgets/deal_card.dart';
+import '../widgets/indi_deal_card.dart';
+import '../widgets/tab_title.dart';
+import './search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/home_screen';
@@ -36,204 +42,62 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Spacer(),
             HomeAppBar(),
+            Spacer(),
             CategoryTab(categories: categories),
+            Spacer(),
             DealsTab(),
-            Expanded(
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: getProportionateScreenWidth(16),
-                    ),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            'Popular Deals',
-                            style: Theme.of(context).textTheme.headline5,
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'See All',
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: GridView(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        childAspectRatio: 0.8,
-                        crossAxisSpacing: getProportionateScreenWidth(8),
-                      ),
-                      children: [
-                        IndiDealCard(
-                          isLeft: true,
-                          isSelected: true,
-                        ),
-                        IndiDealCard(
-                          isLeft: false,
-                          isSelected: false,
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            )
+            Spacer(),
+            PopularDealTab(),
           ],
         ),
       ),
+      bottomNavigationBar: CustomNavBar(),
     );
   }
 }
 
-class IndiDealCard extends StatelessWidget {
-  final bool isLeft;
-  final bool isSelected;
-
-  const IndiDealCard({this.isLeft, this.isSelected});
-
+class PopularDealTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        left: isLeft ? getProportionateScreenWidth(16.0) : 0,
-        right: isLeft ? 0 : getProportionateScreenWidth(16.0),
-      ),
-      child: Container(
-        padding: EdgeInsets.all(
-          getProportionateScreenWidth(8.0),
-        ),
-        decoration: BoxDecoration(
-          color: isSelected ? Colors.white : Colors.white.withOpacity(0.2),
-          borderRadius: BorderRadius.circular(
-            getProportionateScreenWidth(
-              8,
-            ),
-          ),
-          boxShadow: [
-            isSelected
-                ? BoxShadow(
-                    color: kShadowColor,
-                    offset: Offset(
-                      getProportionateScreenWidth(24),
-                      getProportionateScreenWidth(40),
-                    ),
-                    blurRadius: 80,
-                  )
-                : BoxShadow(color: Colors.transparent),
-          ],
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: kGreyShade5,
-                  borderRadius: BorderRadius.circular(
-                    getProportionateScreenWidth(8.0),
-                  ),
+    return Expanded(
+      flex: 10,
+      child: Column(
+        children: [
+          TabTitle('Popular Deals', () {}),
+          Expanded(
+            child: GridView(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 0.8,
+                crossAxisSpacing: getProportionateScreenWidth(8),
+              ),
+              children: [
+                IndiDealCard(
+                  isLeft: true,
+                  isSelected: true,
                 ),
-              ),
+                IndiDealCard(
+                  isLeft: false,
+                  isSelected: false,
+                ),
+              ],
             ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Dragon Fruit',
-                    style: Theme.of(context).textTheme.headline4.copyWith(
-                          fontWeight: FontWeight.w700,
-                        ),
-                  ),
-                  Spacer(),
-                  Text(
-                    '200gr',
-                    style: TextStyle(
-                      fontSize: getProportionateScreenWidth(12),
-                      color: kTextColorAccent,
-                    ),
-                  ),
-                  Spacer(),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          '\$45',
-                          style: Theme.of(context).textTheme.headline5,
-                        ),
-                      ),
-                      RawMaterialButton(
-                        onPressed: () {},
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                        fillColor: kPrimaryGreen,
-                        constraints: BoxConstraints.tightFor(
-                          width: getProportionateScreenWidth(
-                            40,
-                          ),
-                          height: getProportionateScreenWidth(
-                            40,
-                          ),
-                        ),
-                        elevation: 0,
-                        child: Icon(
-                          Icons.add,
-                          color: Colors.white,
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }
 }
 
 class DealsTab extends StatelessWidget {
-  const DealsTab({
-    Key key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: getProportionateScreenWidth(
-              16,
-            ),
-          ),
-          child: Row(
-            children: [
-              Expanded(
-                child: Text(
-                  'Special Deals for You',
-                  style: Theme.of(context).textTheme.headline5,
-                ),
-              ),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  'See All',
-                ),
-              ),
-            ],
-          ),
-        ),
+        TabTitle('Special Deals for You', () {}),
         SizedBox(
           height: getProportionateScreenHeight(10),
         ),
@@ -247,66 +111,6 @@ class DealsTab extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class DealCard extends StatelessWidget {
-  const DealCard({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.bottomLeft,
-      width: getProportionateScreenWidth(280),
-      height: getProportionateScreenHeight(170),
-      margin: EdgeInsets.only(
-        left: getProportionateScreenWidth(16),
-      ),
-      decoration: ShapeDecoration(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(
-            getProportionateScreenWidth(
-              8,
-            ),
-          ),
-        ),
-        gradient: LinearGradient(
-          begin: Alignment.bottomCenter,
-          end: Alignment.topCenter,
-          colors: [
-            kGradientColor,
-            kGradientColor.withOpacity(0),
-          ],
-        ),
-      ),
-      child: Padding(
-        padding: EdgeInsets.all(
-          getProportionateScreenWidth(8),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Fresh Fruit for You',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: getProportionateScreenWidth(20),
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            Text(
-              'Fresh fruit Everyday we Serve to You',
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
@@ -387,10 +191,6 @@ class CategoryCard extends StatelessWidget {
 }
 
 class HomeAppBar extends StatelessWidget {
-  const HomeAppBar({
-    Key key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -423,9 +223,14 @@ class HomeAppBar extends StatelessWidget {
               ],
             ),
           ),
-          Icon(
-            Icons.search,
-            color: kPrimaryGreen,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamed(SearchScreen.routeName);
+            },
+            child: Icon(
+              Icons.search,
+              color: kPrimaryGreen,
+            ),
           ),
         ],
       ),

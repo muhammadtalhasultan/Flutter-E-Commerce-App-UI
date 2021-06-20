@@ -8,6 +8,8 @@ import './screens/signup_screen.dart';
 import './screens/add_address_screen.dart';
 import './screens/map_screen.dart';
 import './screens/home_screen.dart';
+import './screens/search_screen.dart';
+import './screens/vegetable_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,6 +40,8 @@ class MyApp extends StatelessWidget {
             AddAddressScreen.routeName: (ctx) => AddAddressScreen(),
             MapScreen.routeName: (ctx) => MapScreen(),
             HomeScreen.routeName: (ctx) => HomeScreen(),
+            SearchScreen.routeName: (ctx) => SearchScreen(),
+            VegetableScreen.routeName: (ctx) => VegetableScreen(),
           },
         );
       },
