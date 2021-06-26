@@ -1,4 +1,3 @@
-import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
@@ -7,6 +6,8 @@ import '../utils/screen_utils.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/custom_input_button.dart';
 import '../widgets/small_quantity_input.dart';
+import '../screens/checkout_screen.dart';
+import '../widgets/price_breakdown.dart';
 
 class OrderSummaryScreen extends StatelessWidget {
   static const routeName = '/orderSummary';
@@ -79,7 +80,9 @@ class OrderSummaryScreen extends StatelessWidget {
                 horizontal: getProportionateScreenWidth(16.0),
               ),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed(CheckoutScreen.routeName);
+                },
                 child: Text('Checkout'),
               ),
             ),
@@ -123,39 +126,6 @@ class _OrderListState extends State<OrderList> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class PriceBreakdown extends StatelessWidget {
-  const PriceBreakdown({
-    Key key,
-    this.title,
-    this.price,
-  }) : super(key: key);
-
-  final String title;
-  final String price;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          title,
-          style: Theme.of(context).textTheme.headline4.copyWith(
-                color: kTextColorAccent,
-              ),
-        ),
-        Spacer(),
-        Text(
-          price,
-          style: Theme.of(context).textTheme.headline4.copyWith(
-                color: kTextColor,
-                fontWeight: FontWeight.w700,
-              ),
-        ),
-      ],
     );
   }
 }

@@ -18,6 +18,8 @@ import './screens/special_deal_child_screen.dart';
 import './screens/search_fruit_screen.dart';
 import './screens/dragon_fruit_screen.dart';
 import './screens/order_summary_screen.dart';
+import './screens/checkout_screen.dart';
+import './screens/order_success_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -58,6 +60,8 @@ class MyApp extends StatelessWidget {
             SearchFruitScreen.routeName: (ctx) => SearchFruitScreen(),
             DragonFruitScreen.routeName: (ctx) => DragonFruitScreen(),
             OrderSummaryScreen.routeName: (ctx) => OrderSummaryScreen(),
+            CheckoutScreen.routeName: (ctx) => CheckoutScreen(),
+            OrderSuccessScreen.routeName: (ctx) => OrderSuccessScreen(),
           },
         );
       },
