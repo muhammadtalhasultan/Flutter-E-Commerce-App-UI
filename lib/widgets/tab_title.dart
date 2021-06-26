@@ -5,15 +5,20 @@ class TabTitle extends StatelessWidget {
   final String title;
   final String actionText;
   final Function seeAll;
+  final double padding;
 
-  const TabTitle({this.title, this.seeAll, this.actionText = 'See All'});
+  const TabTitle(
+      {this.title,
+      this.seeAll,
+      this.actionText = 'See All',
+      this.padding = 16});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: getProportionateScreenWidth(
-          16,
+          padding,
         ),
       ),
       child: Row(

@@ -16,6 +16,7 @@ import './screens/popular_deals_screen.dart';
 import './screens/special_deal_screen.dart';
 import './screens/special_deal_child_screen.dart';
 import './screens/search_fruit_screen.dart';
+import './screens/dragon_fruit_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
             SpecialDealScreen.routeName: (ctx) => SpecialDealScreen(),
             SpecialDealChildScreen.routeName: (ctx) => SpecialDealChildScreen(),
             SearchFruitScreen.routeName: (ctx) => SearchFruitScreen(),
+            DragonFruitScreen.routeName: (ctx) => DragonFruitScreen(),
           },
         );
       },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flushbar/flushbar.dart';
+import 'package:s2_ecommerce/screens/dragon_fruit_screen.dart';
 
 import '../constants/colors.dart';
 import '../screens/search_fruit_screen.dart';
@@ -42,27 +43,33 @@ class SpecialDealChildScreen extends StatelessWidget {
                   childAspectRatio: 0.7,
                   mainAxisSpacing: getProportionateScreenHeight(8.0),
                 ),
-                itemBuilder: (context, index) => IndiDealCardWithDiscount(
-                  isLeft: index % 2 == 0,
-                  isSelected: index == 0,
-                  addHandler: () {
-                    Flushbar(
-                      flushbarPosition: FlushbarPosition.TOP,
-                      duration: Duration(seconds: 3),
-                      backgroundColor: kPrimaryRed,
-                      icon: Image.asset('assets/images/delivery.png'),
-                      padding: EdgeInsets.symmetric(
-                        vertical: getProportionateScreenHeight(24.0),
-                      ),
-                      margin: EdgeInsets.only(
-                        top: getProportionateScreenHeight(
-                          32,
-                        ),
-                      ),
-                      message:
-                          'Free shipping with a minimum purchase of \$ 100',
-                    )..show(context);
+                itemBuilder: (context, index) => GestureDetector(
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushNamed(DragonFruitScreen.routeName);
                   },
+                  child: IndiDealCardWithDiscount(
+                    isLeft: index % 2 == 0,
+                    isSelected: index == 0,
+                    addHandler: () {
+                      Flushbar(
+                        flushbarPosition: FlushbarPosition.TOP,
+                        duration: Duration(seconds: 3),
+                        backgroundColor: kPrimaryRed,
+                        icon: Image.asset('assets/images/delivery.png'),
+                        padding: EdgeInsets.symmetric(
+                          vertical: getProportionateScreenHeight(24.0),
+                        ),
+                        margin: EdgeInsets.only(
+                          top: getProportionateScreenHeight(
+                            32,
+                          ),
+                        ),
+                        message:
+                            'Free shipping with a minimum purchase of \$ 100',
+                      )..show(context);
+                    },
+                  ),
                 ),
               ),
             )

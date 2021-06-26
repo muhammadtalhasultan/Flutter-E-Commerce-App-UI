@@ -5,17 +5,21 @@ import '../utils/screen_utils.dart';
 class IndiDealCard extends StatelessWidget {
   final bool isLeft;
   final bool isSelected;
+  final bool noPadding;
   final Function addHandler;
 
-  const IndiDealCard({this.isLeft, this.isSelected, this.addHandler});
+  const IndiDealCard(
+      {this.isLeft, this.isSelected, this.addHandler, this.noPadding = false});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
-        left: isLeft ? getProportionateScreenWidth(16.0) : 0,
-        right: isLeft ? 0 : getProportionateScreenWidth(16.0),
-      ),
+      padding: !noPadding
+          ? EdgeInsets.only(
+              left: isLeft ? getProportionateScreenWidth(16.0) : 0,
+              right: isLeft ? 0 : getProportionateScreenWidth(16.0),
+            )
+          : EdgeInsets.all(0),
       child: Container(
         padding: EdgeInsets.all(
           getProportionateScreenWidth(8.0),
