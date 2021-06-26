@@ -12,6 +12,8 @@ import './screens/search_screen.dart';
 import './screens/vegetable_screen.dart';
 import './screens/fruit_screen.dart';
 import './screens/category_screen.dart';
+import './screens/popular_deals_screen.dart';
+import './screens/special_deal_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -46,6 +48,8 @@ class MyApp extends StatelessWidget {
             VegetableScreen.routeName: (ctx) => VegetableScreen(),
             FruitScreen.routeName: (ctx) => FruitScreen(),
             CategoryScreen.routeName: (ctx) => CategoryScreen(),
+            PopularDealsScreen.routeName: (ctx) => PopularDealsScreen(),
+            SpecialDealScreen.routeName: (ctx) => SpecialDealScreen(),
           },
         );
       },

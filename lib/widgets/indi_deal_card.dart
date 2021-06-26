@@ -5,8 +5,9 @@ import '../utils/screen_utils.dart';
 class IndiDealCard extends StatelessWidget {
   final bool isLeft;
   final bool isSelected;
+  final Function addHandler;
 
-  const IndiDealCard({this.isLeft, this.isSelected});
+  const IndiDealCard({this.isLeft, this.isSelected, this.addHandler});
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +81,7 @@ class IndiDealCard extends StatelessWidget {
                         ),
                       ),
                       RawMaterialButton(
-                        onPressed: () {},
+                        onPressed: addHandler,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),

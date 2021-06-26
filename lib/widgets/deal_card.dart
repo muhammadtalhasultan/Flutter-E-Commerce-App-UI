@@ -3,6 +3,8 @@ import '../constants/colors.dart';
 import '../utils/screen_utils.dart';
 
 class DealCard extends StatelessWidget {
+  final bool isHorizontalScrolling;
+  const DealCard([this.isHorizontalScrolling = true]);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,7 +12,12 @@ class DealCard extends StatelessWidget {
       width: getProportionateScreenWidth(280),
       height: getProportionateScreenHeight(170),
       margin: EdgeInsets.only(
-        left: getProportionateScreenWidth(16),
+        left: isHorizontalScrolling
+            ? getProportionateScreenWidth(16)
+            : getProportionateScreenWidth(0),
+        bottom: !isHorizontalScrolling
+            ? getProportionateScreenHeight(32)
+            : getProportionateScreenHeight(0),
       ),
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(

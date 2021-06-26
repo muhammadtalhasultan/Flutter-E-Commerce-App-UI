@@ -10,6 +10,8 @@ import '../widgets/tab_title.dart';
 import '../widgets/category_card.dart';
 import './search_screen.dart';
 import './category_screen.dart';
+import './popular_deals_screen.dart';
+import './special_deal_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/home_screen';
@@ -67,7 +69,9 @@ class PopularDealTab extends StatelessWidget {
       flex: 10,
       child: Column(
         children: [
-          TabTitle('Popular Deals', () {}),
+          TabTitle('Popular Deals', () {
+            Navigator.of(context).pushNamed(PopularDealsScreen.routeName);
+          }),
           Expanded(
             child: GridView(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -99,7 +103,9 @@ class DealsTab extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        TabTitle('Special Deals for You', () {}),
+        TabTitle('Special Deals for You', () {
+          Navigator.of(context).pushNamed(SpecialDealScreen.routeName);
+        }),
         SizedBox(
           height: getProportionateScreenHeight(10),
         ),
