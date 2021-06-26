@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:s2_ecommerce/widgets/discount_text.dart';
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';
 import '../widgets/custom_app_bar.dart';
@@ -126,22 +127,7 @@ class ListCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                if (isDiscount)
-                  Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: getProportionateScreenWidth(4),
-                    ),
-                    decoration: ShapeDecoration(
-                      shape: StadiumBorder(),
-                      color: kAlertColor,
-                    ),
-                    child: Text(
-                      'Disc 40%',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
+                if (isDiscount) DiscoutText(),
                 if (isDiscount) Spacer(),
                 Text(
                   'Dragon Fruit',

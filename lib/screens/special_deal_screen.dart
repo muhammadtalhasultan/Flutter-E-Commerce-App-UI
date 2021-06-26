@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
-import 'package:s2_ecommerce/widgets/custom_app_bar.dart';
-import 'package:s2_ecommerce/widgets/deal_card.dart';
+
+import '../constants/colors.dart';
+import '../screens/special_deal_child_screen.dart';
+import '../utils/screen_utils.dart';
+import '../widgets/custom_app_bar.dart';
+import '../widgets/deal_card.dart';
 
 class SpecialDealScreen extends StatelessWidget {
   static const routeName = '/special_deal';
@@ -35,10 +37,22 @@ class SpecialDealScreen extends StatelessWidget {
                   horizontal: getProportionateScreenWidth(16.0),
                 ),
                 children: [
-                  DealCard(false),
-                  DealCard(false),
-                  DealCard(false),
-                  DealCard(false),
+                  DealCard(
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(SpecialDealChildScreen.routeName);
+                    },
+                    isHorizontalScrolling: false,
+                  ),
+                  DealCard(
+                    isHorizontalScrolling: false,
+                  ),
+                  DealCard(
+                    isHorizontalScrolling: false,
+                  ),
+                  DealCard(
+                    isHorizontalScrolling: false,
+                  ),
                 ],
               ),
             ),

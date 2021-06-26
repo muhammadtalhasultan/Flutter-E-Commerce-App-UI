@@ -3,9 +3,10 @@ import '../utils/screen_utils.dart';
 
 class TabTitle extends StatelessWidget {
   final String title;
+  final String actionText;
   final Function seeAll;
 
-  const TabTitle(this.title, this.seeAll);
+  const TabTitle({this.title, this.seeAll, this.actionText = 'See All'});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class TabTitle extends StatelessWidget {
           TextButton(
             onPressed: seeAll,
             child: Text(
-              'See All',
+              actionText,
             ),
           ),
         ],

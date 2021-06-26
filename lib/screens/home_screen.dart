@@ -69,9 +69,11 @@ class PopularDealTab extends StatelessWidget {
       flex: 10,
       child: Column(
         children: [
-          TabTitle('Popular Deals', () {
-            Navigator.of(context).pushNamed(PopularDealsScreen.routeName);
-          }),
+          TabTitle(
+              title: 'Popular Deals',
+              seeAll: () {
+                Navigator.of(context).pushNamed(PopularDealsScreen.routeName);
+              }),
           Expanded(
             child: GridView(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -103,9 +105,11 @@ class DealsTab extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        TabTitle('Special Deals for You', () {
-          Navigator.of(context).pushNamed(SpecialDealScreen.routeName);
-        }),
+        TabTitle(
+            title: 'Special Deals for You',
+            seeAll: () {
+              Navigator.of(context).pushNamed(SpecialDealScreen.routeName);
+            }),
         SizedBox(
           height: getProportionateScreenHeight(10),
         ),

@@ -36,8 +36,8 @@ class SearchScreen extends StatelessWidget {
                 height: getProportionateScreenHeight(16),
               ),
               TabTitle(
-                'Featured Vegetables',
-                () {
+                title: 'Featured Vegetables',
+                seeAll: () {
                   Navigator.of(context).pushNamed(VegetableScreen.routeName);
                 },
               ),
@@ -64,8 +64,8 @@ class SearchScreen extends StatelessWidget {
                 ),
               ),
               TabTitle(
-                'Special Bundle',
-                () {},
+                title: 'Special Bundle',
+                seeAll: () {},
               ),
               Container(
                 height: getProportionateScreenHeight(240),
