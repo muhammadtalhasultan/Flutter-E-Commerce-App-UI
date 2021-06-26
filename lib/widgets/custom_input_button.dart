@@ -5,27 +5,32 @@ import 'package:s2_ecommerce/utils/screen_utils.dart';
 class CustomIconButton extends StatelessWidget {
   final IconData icon;
   final Function onPress;
+  final double size;
 
-  const CustomIconButton(this.icon, this.onPress);
+  const CustomIconButton(this.icon, this.onPress, {this.size = 40});
 
   @override
   Widget build(BuildContext context) {
-    return RawMaterialButton(
-      fillColor: kGreyShade5,
-      elevation: 0,
-      constraints: BoxConstraints.tightFor(
-        width: getProportionateScreenWidth(40),
-        height: getProportionateScreenWidth(40),
-      ),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(
-          getProportionateScreenWidth(8.0),
+    return SizedBox(
+      height: size,
+      child: RawMaterialButton(
+        fillColor: kGreyShade5,
+        elevation: 0,
+        constraints: BoxConstraints.tightFor(
+          width: getProportionateScreenWidth(size),
+          height: getProportionateScreenWidth(size),
         ),
-      ),
-      onPressed: onPress,
-      child: Icon(
-        icon,
-        color: kGreyShade1,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(
+            getProportionateScreenWidth(8.0),
+          ),
+        ),
+        onPressed: onPress,
+        child: Icon(
+          icon,
+          color: kGreyShade1,
+          size: size / 2,
+        ),
       ),
     );
   }

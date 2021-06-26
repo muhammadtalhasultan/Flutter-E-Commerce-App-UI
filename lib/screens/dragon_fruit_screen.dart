@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
-import 'package:s2_ecommerce/widgets/custom_app_bar.dart';
-import 'package:s2_ecommerce/widgets/custom_input_button.dart';
-import 'package:s2_ecommerce/widgets/discount_text.dart';
-import 'package:s2_ecommerce/widgets/fruit_title.dart';
-import 'package:s2_ecommerce/widgets/image_placeholder.dart';
-import 'package:s2_ecommerce/widgets/indi_deal_card.dart';
-import 'package:s2_ecommerce/widgets/price_tag.dart';
-import 'package:s2_ecommerce/widgets/quantity_input.dart';
-import 'package:s2_ecommerce/widgets/tab_title.dart';
+
+import '../constants/colors.dart';
+import '../screens/order_summary_screen.dart';
+import '../utils/screen_utils.dart';
+import '../widgets/custom_app_bar.dart';
+import '../widgets/custom_input_button.dart';
+import '../widgets/discount_text.dart';
+import '../widgets/fruit_title.dart';
+import '../widgets/image_placeholder.dart';
+import '../widgets/indi_deal_card.dart';
+import '../widgets/price_tag.dart';
+import '../widgets/quantity_input.dart';
+import '../widgets/tab_title.dart';
 
 class DragonFruitScreen extends StatefulWidget {
   static const routeName = '/dragonFruit';
@@ -253,7 +255,10 @@ class _DragonFruitScreenState extends State<DragonFruitScreen> {
                 children: [
                   Expanded(
                     child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context)
+                            .pushNamed(OrderSummaryScreen.routeName);
+                      },
                       child: SizedBox(
                         width: getProportionateScreenWidth(32),
                         child: Image.asset(
