@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/screens/tab_screen.dart';
+import '../screens/tab_screen.dart';
 import '../screens/home_screen.dart';
 
 import './signup_screen.dart';

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/models/item.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
-import 'package:s2_ecommerce/widgets/indi_deal_card.dart';
-import 'package:s2_ecommerce/widgets/list_card.dart';
-import 'package:s2_ecommerce/widgets/tab_title.dart';
+import '../constants/colors.dart';
+import '../models/item.dart';
+import '../utils/screen_utils.dart';
+import '../widgets/indi_deal_card.dart';
+import '../widgets/list_card.dart';
+import '../widgets/tab_title.dart';
 
 class FavScreen extends StatelessWidget {
   final Function setstateCallback;

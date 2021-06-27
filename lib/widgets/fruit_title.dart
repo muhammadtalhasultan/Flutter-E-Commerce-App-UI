@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:s2_ecommerce/models/item.dart';
+import '../models/item.dart';
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';
 

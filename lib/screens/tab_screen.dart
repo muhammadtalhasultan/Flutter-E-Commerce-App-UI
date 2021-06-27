@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/screens/cart_screen.dart';
-import 'package:s2_ecommerce/screens/fav_screen.dart';
-import 'package:s2_ecommerce/screens/home_screen.dart';
-import 'package:s2_ecommerce/screens/user_screen.dart';
-import 'package:s2_ecommerce/widgets/custom_nav_bar.dart';
+import '../screens/cart_screen.dart';
+import '../screens/fav_screen.dart';
+import '../screens/home_screen.dart';
+import '../screens/user_screen.dart';
+import '../widgets/custom_nav_bar.dart';
 
 class TabScreen extends StatefulWidget {
   static const routeName = '/tabScreen';

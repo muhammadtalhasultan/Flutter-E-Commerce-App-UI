@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
-import 'package:s2_ecommerce/widgets/discount_text.dart';
+import '../constants/colors.dart';
+import '../utils/screen_utils.dart';
+import '../widgets/discount_text.dart';
 
 class ListCard extends StatelessWidget {
   final bool isSelected;

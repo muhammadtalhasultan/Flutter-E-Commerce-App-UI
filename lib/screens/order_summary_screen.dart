@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:s2_ecommerce/widgets/order_card.dart';
+import '../widgets/order_card.dart';
 
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';

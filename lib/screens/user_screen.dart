@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/screens/my_profile_screen.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
-import 'package:s2_ecommerce/widgets/image_container.dart';
+import '../constants/colors.dart';
+import '../screens/my_profile_screen.dart';
+import '../utils/screen_utils.dart';
+import '../widgets/image_container.dart';
 
 class UserScreen extends StatelessWidget {
   @override

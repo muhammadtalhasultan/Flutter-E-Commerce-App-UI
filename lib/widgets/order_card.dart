@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
-import 'package:s2_ecommerce/widgets/custom_input_button.dart';
-import 'package:s2_ecommerce/widgets/small_quantity_input.dart';
+import '../constants/colors.dart';
+import '../utils/screen_utils.dart';
+import '../widgets/custom_input_button.dart';
+import '../widgets/small_quantity_input.dart';
 
 class OrderCard extends StatefulWidget {
   const OrderCard({
