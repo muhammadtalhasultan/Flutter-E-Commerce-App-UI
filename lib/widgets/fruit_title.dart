@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:s2_ecommerce/models/item.dart';
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';
 
@@ -22,10 +24,22 @@ class FruitTitle extends StatelessWidget {
                 ),
           ),
         ),
-        Icon(
-          Icons.favorite_border_outlined,
-          color: kPrimaryGreen,
-          size: getProportionateScreenWidth(32),
+        GestureDetector(
+          onTap: () {
+            Provider.of<Items>(context, listen: false).addToFavorite(
+              Item(
+                name: 'Dragon Fruit',
+                discountPrice: '45',
+                originalPrice: '90',
+                mass: '200gr',
+              ),
+            );
+          },
+          child: Icon(
+            Icons.favorite_border_outlined,
+            color: kPrimaryGreen,
+            size: getProportionateScreenWidth(32),
+          ),
         )
       ],
     );

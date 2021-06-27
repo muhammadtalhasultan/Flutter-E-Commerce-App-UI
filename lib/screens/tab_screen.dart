@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:s2_ecommerce/screens/cart_screen.dart';
+import 'package:s2_ecommerce/screens/fav_screen.dart';
 import 'package:s2_ecommerce/screens/home_screen.dart';
 import 'package:s2_ecommerce/screens/user_screen.dart';
 import 'package:s2_ecommerce/widgets/custom_nav_bar.dart';
@@ -19,10 +21,14 @@ class _TabScreenState extends State<TabScreen> {
         'widget': HomeScreen(),
       },
       {
-        'widget': HomeScreen(),
+        'widget': FavScreen(() {
+          setState(() {
+            curTab = 0;
+          });
+        }),
       },
       {
-        'widget': HomeScreen(),
+        'widget': CartScreen(),
       },
       {
         'widget': UserScreen(),
@@ -36,7 +42,7 @@ class _TabScreenState extends State<TabScreen> {
         setState(() {
           curTab = index;
         });
-      }),
+      }, curTab),
     );
   }
 }

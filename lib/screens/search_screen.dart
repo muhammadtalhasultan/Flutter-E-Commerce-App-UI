@@ -99,7 +99,7 @@ class SearchScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: CustomNavBar((_) {}),
+      bottomNavigationBar: CustomNavBar((_) {}, 0),
     );
   }
 }

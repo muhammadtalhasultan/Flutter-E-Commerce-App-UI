@@ -76,7 +76,7 @@ class _FruitScreenState extends State<FruitScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       FruitTitle(
-                        title: 'Fruit\'s Boundle',
+                        title: 'Fruit\'s Bundle',
                       ),
                       Text(
                         'Total 10Kg',
