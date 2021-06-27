@@ -41,23 +41,18 @@ class HomeScreen extends StatelessWidget {
       ),
     ];
     ScreenUtils().init(context);
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Spacer(),
-            HomeAppBar(),
-            Spacer(),
-            CategoryTab(categories: categories),
-            Spacer(),
-            DealsTab(),
-            Spacer(),
-            PopularDealTab(),
-          ],
-        ),
-      ),
-      bottomNavigationBar: CustomNavBar(),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Spacer(),
+        HomeAppBar(),
+        Spacer(),
+        CategoryTab(categories: categories),
+        Spacer(),
+        DealsTab(),
+        Spacer(),
+        PopularDealTab(),
+      ],
     );
   }
 }

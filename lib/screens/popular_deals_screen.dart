@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:s2_ecommerce/widgets/indi_deal_card.dart';
+import '../widgets/indi_deal_card.dart';
 
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';

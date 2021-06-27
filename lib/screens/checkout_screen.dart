@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/screens/order_success_screen.dart';
+import '../screens/order_success_screen.dart';
 
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';

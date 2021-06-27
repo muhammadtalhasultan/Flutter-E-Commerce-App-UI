@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/screens/add_address_screen.dart';
-import 'package:s2_ecommerce/screens/login_screen.dart';
+import '../screens/add_address_screen.dart';
+import '../screens/login_screen.dart';
 
 import '../utils/screen_utils.dart';
 import '../widgets/back_button_ls.dart';

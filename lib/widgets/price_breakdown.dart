@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
+import '../constants/colors.dart';
 
 class PriceBreakdown extends StatelessWidget {
   const PriceBreakdown({

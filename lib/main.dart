@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:s2_ecommerce/screens/my_profile_screen.dart';
 
 import './screens/landing_screen.dart';
 import './utils/custom_theme.dart';
@@ -7,7 +8,6 @@ import './screens/login_screen.dart';
 import './screens/signup_screen.dart';
 import './screens/add_address_screen.dart';
 import './screens/map_screen.dart';
-import './screens/home_screen.dart';
 import './screens/search_screen.dart';
 import './screens/vegetable_screen.dart';
 import './screens/fruit_screen.dart';
@@ -20,6 +20,7 @@ import './screens/dragon_fruit_screen.dart';
 import './screens/order_summary_screen.dart';
 import './screens/checkout_screen.dart';
 import './screens/order_success_screen.dart';
+import './screens/tab_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
             SignupScreen.routeName: (ctx) => SignupScreen(),
             AddAddressScreen.routeName: (ctx) => AddAddressScreen(),
             MapScreen.routeName: (ctx) => MapScreen(),
-            HomeScreen.routeName: (ctx) => HomeScreen(),
+            TabScreen.routeName: (ctx) => TabScreen(),
             SearchScreen.routeName: (ctx) => SearchScreen(),
             VegetableScreen.routeName: (ctx) => VegetableScreen(),
             FruitScreen.routeName: (ctx) => FruitScreen(),
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
             OrderSummaryScreen.routeName: (ctx) => OrderSummaryScreen(),
             CheckoutScreen.routeName: (ctx) => CheckoutScreen(),
             OrderSuccessScreen.routeName: (ctx) => OrderSuccessScreen(),
+            MyProfileScreen.routeName: (ctx) => MyProfileScreen(),
           },
         );
       },

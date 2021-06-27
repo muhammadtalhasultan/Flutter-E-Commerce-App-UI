@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
+import '../constants/colors.dart';
+import '../utils/screen_utils.dart';
 
 class FruitTitle extends StatelessWidget {
   const FruitTitle({

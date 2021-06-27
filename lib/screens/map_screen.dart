@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
-import 'package:s2_ecommerce/widgets/back_button_ls.dart';
-import 'package:s2_ecommerce/widgets/custom_text_field.dart';
+import '../constants/colors.dart';
+import '../utils/screen_utils.dart';
+import '../widgets/back_button_ls.dart';
+import '../widgets/custom_text_field.dart';
 
 class MapScreen extends StatelessWidget {
   static const routeName = '/map_screen';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flushbar/flushbar.dart';
-import 'package:s2_ecommerce/screens/dragon_fruit_screen.dart';
+import '../screens/dragon_fruit_screen.dart';
 
 import '../constants/colors.dart';
 import '../screens/search_fruit_screen.dart';

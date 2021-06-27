@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/widgets/custom_input_button.dart';
-import 'package:s2_ecommerce/widgets/fruit_title.dart';
-import 'package:s2_ecommerce/widgets/image_placeholder.dart';
-import 'package:s2_ecommerce/widgets/price_tag.dart';
-import 'package:s2_ecommerce/widgets/quantity_input.dart';
+import '../widgets/custom_input_button.dart';
+import '../widgets/fruit_title.dart';
+import '../widgets/image_placeholder.dart';
+import '../widgets/price_tag.dart';
+import '../widgets/quantity_input.dart';
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';
 import '../widgets/custom_app_bar.dart';

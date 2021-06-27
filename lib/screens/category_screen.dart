@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/models/category.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
-import 'package:s2_ecommerce/widgets/category_card.dart';
-import 'package:s2_ecommerce/widgets/custom_app_bar.dart';
+import '../constants/colors.dart';
+import '../models/category.dart';
+import '../utils/screen_utils.dart';
+import '../widgets/category_card.dart';
+import '../widgets/custom_app_bar.dart';
 
 class CategoryScreen extends StatelessWidget {
   static const routeName = '/category_screen';

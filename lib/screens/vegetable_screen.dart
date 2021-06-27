@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/widgets/discount_text.dart';
+import '../widgets/discount_text.dart';
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';
 import '../widgets/custom_app_bar.dart';

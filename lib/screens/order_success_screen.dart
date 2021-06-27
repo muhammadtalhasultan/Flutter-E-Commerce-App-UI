@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:s2_ecommerce/constants/colors.dart';
-import 'package:s2_ecommerce/utils/screen_utils.dart';
+
+import '../screens/tab_screen.dart';
+import '../constants/colors.dart';
+import '../utils/screen_utils.dart';
 
 class OrderSuccessScreen extends StatelessWidget {
   static const routeName = '/orderSuccess';
@@ -52,7 +54,10 @@ class OrderSuccessScreen extends StatelessWidget {
                 horizontal: getProportionateScreenWidth(16.0),
               ),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushReplacementNamed(TabScreen.routeName);
+                },
                 child: Text('Continue Shopping'),
               ),
             ),
