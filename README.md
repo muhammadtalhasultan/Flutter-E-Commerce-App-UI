@@ -1,16 +1,52 @@
-# s2_ecommerce
+# Food Delivery App - Flutter UI 
 
-A new Flutter project.
+This is our complete food delivery app, where I will share with you how you can create a nice clean screens for your app that can run both Andriod and iOS devices because it builds with #flutter.
 
-## Getting Started
+## [Watch it on YouTube](https://www.youtube.com/playlist?list=PLFl8xqtYMeczs0psOdLCCuFxA2bURchzC)
 
-This project is a starting point for a Flutter application.
+**Packages we are using:**
 
-A few resources to get you started if this is your first Flutter project:
+- flutter_svg: [link](https://pub.dev/packages/flutter_svg)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screens it contains:
+
+=> Onboarding
+
+=> Login
+
+=> Forgot Password
+
+=> Sign Up
+
+=> Complete Profile
+
+=> OTP Verification
+
+=> Home Page
+
+=> Product Details
+
+=> Order
+
+=> Profile
+
+=> Bottom Navigation Bar
+
+
+Thanks for your love and support 🙏 
+
+## Photos
+![Preview](https://i.ibb.co/4PtKN9z/1.png)
+![Preview](https://i.ibb.co/rH83m29/2.png)
+![Preview](https://i.ibb.co/fXSyTdC/3.png)
+![Preview](https://i.ibb.co/vv3gKSL/4.png)
+![Preview](https://i.ibb.co/L5FGZ0D/5.png)
+![Preview](https://i.ibb.co/7Vgp2Xv/6.png)
+![Preview](https://i.ibb.co/m9sCG5s/7.png)
+![Preview](https://i.ibb.co/GdHc54L/8.png)
+![Preview](https://i.ibb.co/vc3rypc/9.png)
+![Preview](https://i.ibb.co/zS3fkMG/10.png)
+![Preview](https://i.ibb.co/yRb3zGS/11.png)
+![Preview](https://i.ibb.co/1QPLzH3/12.png)
+![Preview](https://i.ibb.co/HCB3mGz/13.png)
